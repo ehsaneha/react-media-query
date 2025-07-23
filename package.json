@@ -1,0 +1,49 @@
+{
+  "name": "@ehsaneha/react-media-query",
+  "version": "1.0.0",
+  "description": "A custom React hook that returns the current responsive breakpoint index or evaluates media query rules based on the window's width.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ehsaneha/react-media-query.git"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-react": "^7.26.3",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@types/jest": "^30.0.0",
+    "@types/react": "^19.0.4",
+    "@types/react-dom": "^19.0.2",
+    "jest": "^30.0.5",
+    "jest-environment-jsdom": "^30.0.5",
+    "ts-jest": "^29.4.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^4.9.5"
+  },
+  "keywords": [
+    "javascript",
+    "typescript",
+    "React",
+    "Custom Hook",
+    "MediaQuery"
+  ],
+  "author": "ehsaneha",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ehsaneha/react-media-query/issues"
+  },
+  "homepage": "https://github.com/ehsaneha/react-media-query#readme",
+  "dependencies": {
+    "@ehsaneha/react-debounce": "^1.0.2"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0"
+  }
+}
