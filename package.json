@@ -1,6 +1,6 @@
 {
   "name": "@ehsaneha/react-media-query",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A custom React hook that returns the current responsive breakpoint index or evaluates media query rules based on the window's width.",
   "main": "dist/index.js",
   "scripts": {

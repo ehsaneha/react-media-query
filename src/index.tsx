@@ -146,16 +146,23 @@ function getResult<
 //
 //
 // --- Hook ---
-export function useMediaQueryOnChange<
+export function useMediaQueryStateless<
   TRule extends MediaQueryRule,
   TResult = TRule extends TRuleBoolean ? boolean : MediaQueryIndex
->(onChange: (result: TResult) => void, rule?: TRule) {
+>(
+  onChange: (result: TResult) => void,
+  { rule, immediate }: { rule?: TRule; immediate?: boolean } = {}
+) {
   const { sizes } = useMediaQueryContext();
 
   React.useEffect(() => {
     const handleResize = () => {
       onChange(getResult(sizes, rule));
     };
+
+    if (immediate) {
+      onChange(getResult(sizes, rule));
+    }
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
@@ -169,7 +176,7 @@ export default function useMediaQuery<
   const { sizes } = useMediaQueryContext();
   const [state, setState] = React.useState<TResult>(getResult(sizes, rule));
 
-  useMediaQueryOnChange(setState, rule);
+  useMediaQueryStateless(setState, { rule });
 
   return state;
 }
